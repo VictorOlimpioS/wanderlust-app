@@ -2,7 +2,7 @@
 ENTREGA INDIVIDUA - CADASTRO DE HOSPITAIS
 
 
-![alt text](screenshots/menu.png)
+![](wanderlust-app/app/src/main/java/br/ufrpe/wanderlustapp/screenshots//menu.png)
 
 ![alt text](screenshots/lista1.png)
 
