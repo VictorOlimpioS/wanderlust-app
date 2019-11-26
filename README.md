@@ -1,7 +1,7 @@
 # wanderlust-app
 ## ENTREGA INDIVIDUAL - CADASTRO DE HOSPITAIS
 
-![menu](https://github.com/VictorOlimpioS/wanderlust-app/blob/master/menu.png)
+![alt text](https://github.com/VictorOlimpioS/wanderlust-app/blob/master/menu.png)
 
 ![menu](https://github.com/VictorOlimpioS/wanderlust-app/blob/master/lista%20em%20branco.png)
 
