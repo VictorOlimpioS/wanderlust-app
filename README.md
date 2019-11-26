@@ -1,5 +1,5 @@
 # wanderlust-app
-ENTREGA INDIVIDUA - CADASTRO DE HOSPITAIS
+## ENTREGA INDIVIDUAL - CADASTRO DE HOSPITAIS
 
 ![menu](https://github.com/VictorOlimpioS/wanderlust-app/blob/master/menu.png)
 
