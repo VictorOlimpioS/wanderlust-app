@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/detalhe_hospital_nome"
+        android:id="@+id/formulario_hospital_nome"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/detalhe_hospital_descricao"
+        android:id="@+id/formulario_hospital_descricao"
         android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginBottom="8dp"
@@ -33,9 +33,9 @@
         android:hint="Descrição do ponto"
         android:textColorHint="#471F8F"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/detalhe_hospital_nome"
-        app:layout_constraintStart_toStartOf="@id/detalhe_hospital_nome"
-        app:layout_constraintTop_toBottomOf="@id/detalhe_hospital_nome"
+        app:layout_constraintEnd_toEndOf="@id/formulario_hospital_nome"
+        app:layout_constraintStart_toStartOf="@id/formulario_hospital_nome"
+        app:layout_constraintTop_toBottomOf="@id/formulario_hospital_nome"
         app:layout_constraintVertical_bias="0.04000002" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

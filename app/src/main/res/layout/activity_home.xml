@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="br.ufrpe.wanderlustapp.usuario.gui.HomeActivity"
     android:id="@+id/relativelayout1">
@@ -22,7 +22,7 @@
 
     <Spinner
         android:id="@+id/spinner1"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dip"
         android:layout_marginRight="8dip"
@@ -46,7 +46,7 @@
     <!-- Spinner Dropdown -->
     <Spinner
         android:id="@+id/spinner2"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dip"
         android:layout_marginLeft="30dip"
@@ -57,7 +57,7 @@
     <TextView
         android:id="@+id/txtPratos"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="170dp"
         android:text="Pratos mais populares"
         android:textColor="#471F8F"
@@ -83,10 +83,10 @@
         android:id="@+id/recyclerview1"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="600dp"
         android:layout_centerVertical="false"
         android:layout_centerHorizontal="false"
-        android:layout_marginTop="640dp"
+        android:layout_marginTop="495dp"
 
         tools:listitem="@layout/horizontal_item"/>
 

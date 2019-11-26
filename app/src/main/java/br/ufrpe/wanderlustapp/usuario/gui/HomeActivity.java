@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.ufrpe.wanderlustapp.R;
+import br.ufrpe.wanderlustapp.hopitais.gui.ListaHospitaisActivity;
 import br.ufrpe.wanderlustapp.infra.Sessao;
 import br.ufrpe.wanderlustapp.infra.recomendacao.Recomendacao;
 import br.ufrpe.wanderlustapp.pessoaPrato.dominio.PessoaPrato;
@@ -131,12 +132,16 @@ public class HomeActivity extends Activity implements
             Intent iniciarGerenciarPonto =
                     new Intent(HomeActivity.this, ListaPontosActivity.class);
             startActivity(iniciarGerenciarPonto);
+        }else if(RecyclerViewItemPosition == 5){
+            Intent iniciarHospitais =
+                    new Intent(HomeActivity.this, ListaHospitaisActivity.class);
+            startActivity(iniciarHospitais);
         }
-        else if(RecyclerViewItemPosition == 5){
+        else if(RecyclerViewItemPosition == 6){
             Intent iniciarPerfil =
                     new Intent(HomeActivity.this, PerfilActivity.class);
             startActivity(iniciarPerfil);
-        }else if(RecyclerViewItemPosition == 6){
+        }else if(RecyclerViewItemPosition == 7){
             Sessao.instance.reset();
             startActivity(new Intent(HomeActivity.this, LoginActivity.class));
         }
@@ -249,6 +254,7 @@ public class HomeActivity extends Activity implements
         Tela.add("Pontos Turísticos");
         Tela.add("Gerenciar pratos");
         Tela.add("Gerenciar pontos");
+        Tela.add("Hospitais");
         Tela.add("Perfil");
         Tela.add("Sair");
     }

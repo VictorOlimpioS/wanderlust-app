@@ -13,6 +13,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".pontoTuristico.gui.DetalhesPontoActivity"></activity>
         <activity android:name=".pontoTuristico.gui.ListaPontosVisualizacao" />
+        <activity android:name=".hopitais.gui.ListaHospitaisActivity" />
+        <activity android:name=".hopitais.gui.adapter.DetalhesHospitaisActivity" />
+        <activity android:name=".hopitais.gui.CadastraHospitaisActivity" />
         <activity android:name=".pontoTuristico.gui.PontoItemTouchHelperCallback" />
         <activity android:name=".pontoTuristico.gui.AtualizaPontosActivity" />
         <activity android:name=".pontoTuristico.gui.CadastraPontosActivity" />

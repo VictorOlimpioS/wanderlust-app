@@ -51,6 +51,8 @@ public class ListaPontosActivity extends AppCompatActivity {
         });
     }
 
+
+
     private void inserePonto(PontoTuristico pontoTuristico) {
         try {
             pontoTuristicoServices.cadastrar(pontoTuristico);

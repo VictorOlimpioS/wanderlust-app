@@ -3,6 +3,7 @@ package br.ufrpe.wanderlustapp.infra;
 import java.util.HashMap;
 import java.util.Map;
 
+import br.ufrpe.wanderlustapp.hopitais.dominio.Hospitais;
 import br.ufrpe.wanderlustapp.pontoTuristico.dominio.PontoTuristico;
 import br.ufrpe.wanderlustapp.pratoImagem.dominio.PratoImagem;
 import br.ufrpe.wanderlustapp.pontoImagem.dominio.PontoImagem;
@@ -29,6 +30,12 @@ public class Sessao {
 
     public PontoTuristico getPontoTuristico(){return (PontoTuristico) values.get("sessao.PontoTuristico");}
 
+
+    public Hospitais getHospital(){return (Hospitais) values.get("sessao.Hospitais");}
+
+    public void setHospital(Hospitais hospital){setValue("sessao.Hospitais", hospital);}
+
+
     public void setPratoImagem(PratoImagem pratoImagem){setValue("sessao.PratoImagem", pratoImagem);}
 
     public PratoImagem getPratoImagem(){return (PratoImagem)values.get("sessao.PratoImagem");}
@@ -42,6 +49,8 @@ public class Sessao {
     public void resetPonto(){setPontoTuristico(null);}
 
     public void resetImagem(){setPratoImagem(null);}
+
+    public void resetHospital(){setHospital(null);}
 
     @SuppressWarnings("WeakerAccess")
     public void setValue(String key, Object value) {

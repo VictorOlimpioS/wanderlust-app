@@ -46,6 +46,13 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String CAMPO_DESCRICAO_PONTO = "descricao";
     public static final String CAMPO_FK_CIDADE_PONTO = "fk_cidade";
 
+    //Tabela Hospitais
+    public static final String TABELA_HOSPITAIS = "tb_hospitais";
+    public static final String CAMPO_ID_HOSPITAIL = "id";
+    public static final String CAMPO_NOME_HOSPITAL = "nome_ponto";
+    public static final String CAMPO_DESCRICAO_HOSPITAL = "descricao";
+    public static final String CAMPO_FK_CIDADE_HOSPITAL = "fk_cidade";
+
     //Tabela PessoaPrato
     public static final String TABELA_PESSOA_PRATO = "tb_pessoa_prato";
     public static final String CAMPO_ID_PESSOA_PRATO = "id";
@@ -68,7 +75,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
 
     private static final String[] TABELAS = {
-            TABELA_PESSOA, TABELA_USUARIO, TABELA_PAIS, TABELA_CIDADE, TABELA_PRATO, TABELA_PONTO, TABELA_PESSOA_PRATO, TABELA_PRATO_IMAGEM, TABELA_PONTO_IMAGEM
+            TABELA_PESSOA, TABELA_USUARIO, TABELA_PAIS, TABELA_CIDADE, TABELA_PRATO, TABELA_PONTO, TABELA_HOSPITAIS, TABELA_PESSOA_PRATO, TABELA_PRATO_IMAGEM, TABELA_PONTO_IMAGEM
     };
 
     public DBHelper(Context context) {
@@ -84,6 +91,7 @@ public class DBHelper extends SQLiteOpenHelper {
         createTableCidade(db);
         createTablePrato(db);
         createTablePonto(db);
+        createTableHospitais(db);
         createTablePessoaPrato(db);
         createTablePratoImagem(db);
         createTablePontoImagem(db);
@@ -166,6 +174,19 @@ public class DBHelper extends SQLiteOpenHelper {
         sqlTbPonto = String.format(sqlTbPonto,
                 TABELA_PONTO, CAMPO_ID_PONTO, CAMPO_NOME_PONTO, CAMPO_DESCRICAO_PONTO, CAMPO_FK_CIDADE_PONTO, CAMPO_FK_CIDADE_PONTO, TABELA_CIDADE, CAMPO_ID_CIDADE);
         db.execSQL(sqlTbPonto);
+
+    }private void createTableHospitais(SQLiteDatabase db){
+        String sqlTbHospitais =
+                "CREATE TABLE %1$s ( "  +
+                        "  %2$s INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                        "  %3$s TEXT NOT NULL, " +
+                        "  %4$s TEXT NOT NULL, " +
+                        "  %5$s INTEGER NOT NULL, " +
+                        "  FOREIGN KEY(%6$s) REFERENCES %7$s(%8$s)" +
+                        ");";
+        sqlTbHospitais = String.format(sqlTbHospitais,
+                TABELA_HOSPITAIS, CAMPO_ID_HOSPITAIL, CAMPO_NOME_HOSPITAL, CAMPO_DESCRICAO_HOSPITAL, CAMPO_FK_CIDADE_HOSPITAL, CAMPO_FK_CIDADE_HOSPITAL, TABELA_CIDADE, CAMPO_ID_CIDADE);
+        db.execSQL(sqlTbHospitais);
     }
 
     private void createTablePessoaPrato(SQLiteDatabase db) {
