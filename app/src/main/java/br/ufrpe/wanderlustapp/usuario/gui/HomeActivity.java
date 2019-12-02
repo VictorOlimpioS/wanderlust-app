@@ -122,26 +122,30 @@ public class HomeActivity extends Activity implements
             Intent iniciarPontosTuristicos =
                     new Intent(HomeActivity.this, ListaPontosVisualizacao.class);
             startActivity(iniciarPontosTuristicos);
+        }else if(RecyclerViewItemPosition == 3){
+            Intent iniciarChatbot =
+                    new Intent(HomeActivity.this, ListaPontosVisualizacao.class);
+            startActivity(iniciarChatbot);
         }
-        else if(RecyclerViewItemPosition == 3){
+        else if(RecyclerViewItemPosition == 4){
             Intent iniciarGerenciarPrato =
                     new Intent(HomeActivity.this, ListaPratosActivity.class);
             startActivity(iniciarGerenciarPrato);
         }
-        else if(RecyclerViewItemPosition == 4){
+        else if(RecyclerViewItemPosition == 5){
             Intent iniciarGerenciarPonto =
                     new Intent(HomeActivity.this, ListaPontosActivity.class);
             startActivity(iniciarGerenciarPonto);
-        }else if(RecyclerViewItemPosition == 5){
+        }else if(RecyclerViewItemPosition == 6){
             Intent iniciarHospitais =
                     new Intent(HomeActivity.this, ListaHospitaisActivity.class);
             startActivity(iniciarHospitais);
         }
-        else if(RecyclerViewItemPosition == 6){
+        else if(RecyclerViewItemPosition == 7){
             Intent iniciarPerfil =
                     new Intent(HomeActivity.this, PerfilActivity.class);
             startActivity(iniciarPerfil);
-        }else if(RecyclerViewItemPosition == 7){
+        }else if(RecyclerViewItemPosition == 8){
             Sessao.instance.reset();
             startActivity(new Intent(HomeActivity.this, LoginActivity.class));
         }
@@ -252,6 +256,7 @@ public class HomeActivity extends Activity implements
         Tela.add("Mais pratos");
         Tela.add("Pratos favoritos");
         Tela.add("Pontos Turísticos");
+        Tela.add("Chatbot");
         Tela.add("Gerenciar pratos");
         Tela.add("Gerenciar pontos");
         Tela.add("Hospitais");

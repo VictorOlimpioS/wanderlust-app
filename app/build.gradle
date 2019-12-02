@@ -1,5 +1,11 @@
 apply plugin: 'com.android.application'
 
+repositories {
+    maven {
+        url  "https://dl.bintray.com/ibm-cloud-sdks/ibm-cloud-sdk-repo"
+    }
+}
+
 android {
     packagingOptions {
         exclude 'META-INF/DEPENDENCIES'
@@ -11,15 +17,19 @@ android {
         exclude 'META-INF/notice.txt'
         exclude 'META-INF/ASL2.0'
     }
+
+
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "br.ufrpe.wanderlustapp"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
 
     }
     buildTypes {
@@ -27,6 +37,19 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+
+    signingConfigs {
+        release {
+            v2SigningEnabled true
+        }
+    }
+
+
+    // solve duplicate classes
+    applicationVariants.all { variant ->
+        variant.getRuntimeConfiguration().exclude group: 'com.google.code.findbugs', module: 'jsr305'
+        variant.getRuntimeConfiguration().exclude group: 'com.google.code.findbugs', module: 'annotations'
     }
 }
 
@@ -42,5 +65,12 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0-rc01'
     debugImplementation 'com.amitshekhar.android:debug-db:1.0.6'
-
+    implementation 'com.ibm.watson:assistant:8.0.0'
+    implementation 'com.ibm.watson:text-to-speech:8.0.0'
+    implementation 'com.ibm.watson:speech-to-text:8.0.0'
+    implementation 'com.ibm.watson.developer_cloud:android-sdk:0.5.0'
+    testImplementation 'junit:junit:4.12'
+    implementation ('com.ibm.watson:ibm-watson:8.0.0'){
+        exclude group: 'com.google.code.findbugs', module: 'annotations'
+    }
 }
